@@ -14,53 +14,104 @@
     --text-color: #f2f2f2;
 }
 
+/* Temporary margin for filler page titles */
+h1 {
+  margin: 1em
+}
+
+/* Set the text color and text decoration for all text on the page */
 h1, h2, p, nav a, #home { 
   color: var(--text-color); 
   text-decoration: none; 
 }
 
+/* Set the font for all headings on the page */
 h1, h2, nav, #home  { font-family: "Barlow Condensed", sans-serif; }
 
+/* Set the font for all p tags on the page */
 p { font-family: "Kanit", sans-serif; }
 
- header {
+/* Set the header height and color */
+header {
   height: 96px;
   background-color: var(--secondary-color);
 }
 
-nav {
+/* Hide nav menu and X icon when in mobile view */
+nav, .x-icon-hide {
   display: none;
 }
 
-.x-icon {
-  display: none;
+/* Set bottom margin for nav items in overlay */
+nav a {
+  margin-bottom: 0.5em;
 }
 
+/* Set the styling for the business name in nav menu */
 #home {
   position: absolute; 
   font-size: 1.5em;
   font-weight: 600;
   margin-top: 33px;
   margin-left: 1em;
-  z-index: 10;
+  z-index: 50;
   background: none;
 }
 
-.nav-icon, .x-icon {
+/* Set styling for nav icon and X icon */
+.nav-mobile-icon, .x-icon {
+  font-size: 32px;
   position: absolute;
   right: 0;
-  fill: var(--text-color);
-  width: 32px;
   margin-top: 32px;
   margin-right: 1em;
   background: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Set X icon to display on top of the overlay */
+.x-icon {
+  z-index: 30;
+}
+
+/* Set the styling of the chevron in mobile view */
+.chevron {
+  font-size: 0.5em;
+  margin-bottom: 0.35em;
+}
+
+/* Set the styling of the overlay when the overlay is toggled */
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #010101;
+  z-index: 20;
+}
+
+/* Set the styling of the nav items when the overlay is toggled */
+nav.menu-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 6em;
+  left: 2.5em;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  font-size: 2.5em;
+  font-weight: 500;
+  margin-bottom: 1em;
 }
 
 @media (min-width: 1099px) {
-  .nav-icon {
+  /* Set nav icon and X icon to not display when the screen is in desktop view   */
+  .nav-mobile-icon, .x-icon {
     display: none;
   }
 
+  /* Set the styling of the nav container when the screen is in desktop view  */
   nav {
     position: absolute; 
     display: flex;
@@ -71,10 +122,49 @@ nav {
     z-index: 10;
     background: none;
   }
-
+  /* Set the styling of the nav items when the screen is in desktop view */
   nav a {
     margin-right: 2em;
     background: none;
   }
+  /* Set the chevron arrows to only display in mobile view */
+  .chevron {
+    display: none;
+  }
 }
 
+/* Set keyframes to transition elements from invisible to visible */
+@keyframes AppearOnPage {
+  0% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+/* Set the overlay and X icon to ease from invisible to visible when the nav icon is clicked  */
+.overlay, .x-icon {
+  opacity: 0; 
+  animation: AppearOnPage 100ms ease-in 150ms forwards; 
+}
+/* Set the nav items to ease from invisible to visible when the nav icon is clicked but after the overlay has already appeared  */
+nav a {
+  opacity: 0; 
+  animation: AppearOnPage 300ms ease-in 300ms forwards; /* Adjust duration and delay as needed */
+}
+
+/* Set keyframes to slightly elevate elements upwards */
+@keyframes slightlyElevate {
+  0% {
+    opacity: 0; 
+    transform: translateY(50%); 
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+/* Set nav items in overlay to slightly elevate upwards */
+nav a {
+  opacity: 0; 
+  animation: slightlyElevate 300ms ease-in 300ms forwards; /* Adjust duration and delay as needed */
+}
