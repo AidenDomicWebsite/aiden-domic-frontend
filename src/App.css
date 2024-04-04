@@ -37,6 +37,7 @@ p { font-family: "Kanit", sans-serif; }
 /* Set the header height and color */
 header {
   height: 96px;
+  background-color: var(--secondary-color);
 }
 
 /* Set footer styling */
@@ -151,13 +152,14 @@ nav.menu-open {
   }
   /* Set the styling of the nav items when the screen is in desktop view */
   nav a {
-    margin-right: 2em;
+    margin-right: 20px;
     background: none;
   }
   /* Set the chevron arrows to only display in mobile view */
   .chevron {
     display: none;
   }
+
 }
 
 /* Set keyframes to transition elements from invisible to visible */
@@ -194,12 +196,4 @@ nav a {
 nav a {
   opacity: 0; 
   animation: slightlyElevate 300ms ease-in 300ms forwards; /* Adjust duration and delay as needed */
-}
-
-
-
-.splash {
-  position: absolute;
-  top: 0;
-  width: 100vw;
 }
