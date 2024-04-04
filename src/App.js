@@ -30,12 +30,23 @@ function App() {
           <Link to="/contact" onClick={closeMenu}>CONTACT <FontAwesomeIcon className='chevron' icon={faChevronRight} /></Link>
           </nav>
         </header>
+        <body>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/services" element={<ServicesPage />} />
         </Routes>
         {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
+        <footer>
+        <div className='test'>
+        <Link className='footerhome' onClick={closeMenu} to="/">STRENTH TO BREATH</Link>
+        <Link className='footerhome' onClick={closeMenu} to="/contact">CONTACT</Link>
+        </div>
+        <p className='footer-text'>50/100 example st, Melbourne</p>
+        <p className='footer-text'>example@email.com</p>
+        <p className='footer-text'>0412 345 678</p>
+        </footer>
+        </body>
       </div>
     </Router>
   );

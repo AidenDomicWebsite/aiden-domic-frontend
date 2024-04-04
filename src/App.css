@@ -3,7 +3,6 @@
 
 * {
   box-sizing: border-box;
-  background-color: var(--primary-color);
   margin: 0;
   padding: 0;
 }
@@ -14,19 +13,23 @@
     --text-color: #f2f2f2;
 }
 
+body {
+  background-color: var(--primary-color);
+}
+
 /* Temporary margin for filler page titles */
 h1 {
-  margin: 1em
+  margin: 20px
 }
 
 /* Set the text color and text decoration for all text on the page */
-h1, h2, p, nav a, #home { 
+h1, h2, p, nav a, #home, .footerhome, .footercontact  { 
   color: var(--text-color); 
   text-decoration: none; 
 }
 
 /* Set the font for all headings on the page */
-h1, h2, nav, #home  { font-family: "Barlow Condensed", sans-serif; }
+h1, h2, nav, #home, .footerhome, .footercontact  { font-family: "Barlow Condensed", sans-serif; }
 
 /* Set the font for all p tags on the page */
 p { font-family: "Kanit", sans-serif; }
@@ -34,7 +37,32 @@ p { font-family: "Kanit", sans-serif; }
 /* Set the header height and color */
 header {
   height: 96px;
-  background-color: var(--secondary-color);
+}
+
+/* Set footer styling */
+footer {
+  border-top: solid var(--text-color);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 20px;
+  padding-top: 1em;
+  z-index: 20;
+}
+
+/* Set styling for the links in the footer */
+.footerhome, .footercontact  {
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 0.5em;
+  background: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+/* Set the footer */
+.footer-text { 
+  font-family: "Barlow Condensed", sans-serif; 
 }
 
 /* Hide nav menu and X icon when in mobile view */
@@ -53,7 +81,7 @@ nav a {
   font-size: 1.5em;
   font-weight: 600;
   margin-top: 33px;
-  margin-left: 1em;
+  margin-left: 20px;
   z-index: 50;
   background: none;
 }
@@ -64,7 +92,7 @@ nav a {
   position: absolute;
   right: 0;
   margin-top: 32px;
-  margin-right: 1em;
+  margin-right: 20px;
   background: none;
   color: var(--text-color);
   cursor: pointer;
@@ -96,9 +124,8 @@ nav.menu-open {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 6em;
-  left: 2.5em;
-  transform: translate(-50%, -50%);
+  top: 4em;
+  left: 20px;
   z-index: 30;
   font-size: 2.5em;
   font-weight: 500;
@@ -167,4 +194,12 @@ nav a {
 nav a {
   opacity: 0; 
   animation: slightlyElevate 300ms ease-in 300ms forwards; /* Adjust duration and delay as needed */
+}
+
+
+
+.splash {
+  position: absolute;
+  top: 0;
+  width: 100vw;
 }
