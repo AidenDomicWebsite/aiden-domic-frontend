@@ -12,15 +12,19 @@ function App() {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+    // Disable scrolling when the menu is open
+    document.body.style.overflow = menuOpen ? 'auto' : 'hidden';
   };
 
   const closeMenu = () => {
     setMenuOpen(false);
+    // Enable scrolling when the menu is closed
+    document.body.style.overflow = 'auto';
   };
 
   return (
     <Router>
-      <div>
+      <div class="main-container">
         <header>
           <FontAwesomeIcon className={menuOpen ? 'x-icon' : 'x-icon-hide'} icon={faX} onClick={toggleMenu} />
           <FontAwesomeIcon className='nav-mobile-icon' icon={faBars} onClick={toggleMenu} />
@@ -37,16 +41,17 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
         </Routes>
         {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
-        <footer>
-        <div className='test'>
-        <Link className='footerhome' onClick={closeMenu} to="/">STRENTH TO BREATH</Link>
-        <Link className='footerhome' onClick={closeMenu} to="/contact">CONTACT</Link>
+        </body>
+        <footer className={menuOpen ? 'overlay-footer' : ''}>
+        <div>
+          <Link className='footerhome' onClick={closeMenu} to="/">STRENTH TO BREATH</Link>
+          <Link className='footerhome' onClick={closeMenu} to="/contact">CONTACT</Link>
         </div>
         <p className='footer-text'>50/100 example st, Melbourne</p>
         <p className='footer-text'>example@email.com</p>
         <p className='footer-text'>0412 345 678</p>
-        </footer>
-        </body>
+      </footer>
+        
       </div>
     </Router>
   );

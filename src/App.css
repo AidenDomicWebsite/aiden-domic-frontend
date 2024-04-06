@@ -13,8 +13,15 @@
     --text-color: #f2f2f2;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 body {
   background-color: var(--primary-color);
+  flex: 1;
 }
 
 /* Temporary margin for filler page titles */
@@ -42,6 +49,13 @@ header {
 
 /* Set footer styling */
 footer {
+  border-top: solid var(--text-color);
+  margin: 20px;
+  padding-top: 1em;
+}
+
+/* Set the footer to display at the bottom of the view port when overlay is active */
+.overlay-footer {
   border-top: solid var(--text-color);
   position: absolute;
   bottom: 0;
@@ -97,6 +111,7 @@ nav a {
   background: none;
   color: var(--text-color);
   cursor: pointer;
+  z-index: 20;
 }
 
 /* Set X icon to display on top of the overlay */
@@ -162,6 +177,12 @@ nav.menu-open {
 
 }
 
+/* NAVIGATION ANIMATIONS */
+/* ----------------------------------------------- */
+
+
+
+
 /* Set keyframes to transition elements from invisible to visible */
 @keyframes AppearOnPage {
   0% {
@@ -175,6 +196,11 @@ nav.menu-open {
 .overlay, .x-icon {
   opacity: 0; 
   animation: AppearOnPage 100ms ease-in 150ms forwards; 
+}
+/* Set the footer to ease from invisible to visible when the nav icon is clicked  */
+.overlay-footer {
+  opacity: 0; 
+  animation: AppearOnPage 300ms ease-in 600ms forwards; 
 }
 /* Set the nav items to ease from invisible to visible when the nav icon is clicked but after the overlay has already appeared  */
 nav a {
@@ -197,3 +223,10 @@ nav a {
   opacity: 0; 
   animation: slightlyElevate 300ms ease-in 300ms forwards; /* Adjust duration and delay as needed */
 }
+
+
+
+
+/* ----------------------------------------------- */
+/* NAVIGATION ANIMATIONS */
+
