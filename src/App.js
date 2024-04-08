@@ -28,7 +28,7 @@ function App() {
         <header>
           <FontAwesomeIcon className={menuOpen ? 'x-icon' : 'x-icon-hide'} icon={faX} onClick={toggleMenu} />
           <FontAwesomeIcon className='nav-mobile-icon' icon={faBars} onClick={toggleMenu} />
-          <Link id='home' onClick={closeMenu} to="/">STRENTH TO BREATH</Link>
+          <Link id='home' onClick={closeMenu} to="/">STRENGTH TO BREATH</Link>
           <nav className={menuOpen ? 'menu-open' : ''}>
           <Link to="/services" onClick={closeMenu}>SERVICES <FontAwesomeIcon className='chevron' icon={faChevronRight} /></Link>
           <Link to="/contact" onClick={closeMenu}>CONTACT <FontAwesomeIcon className='chevron' icon={faChevronRight} /></Link>
@@ -44,7 +44,7 @@ function App() {
         </body>
         <footer className={menuOpen ? 'overlay-footer' : ''}>
         <div>
-          <Link className='footerhome' onClick={closeMenu} to="/">STRENTH TO BREATH</Link>
+          <Link className='footerhome' onClick={closeMenu} to="/">STRENGTH TO BREATH</Link>
           <Link className='footerhome' onClick={closeMenu} to="/contact">CONTACT</Link>
         </div>
         <p className='footer-text'>50/100 example st, Melbourne</p>
