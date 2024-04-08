@@ -20,7 +20,7 @@ const HomePage = () => {
         </p>
       
       {/* Banner 1 */}
-      <div className='main-content-imgs'>
+      <div className='imgs-container'>
         <img className='mainpageimgs' src={Discover} alt="Discover" />
         <h1 className='img-text'>Discover the Power of Mindset</h1>
       </div>
@@ -28,7 +28,7 @@ const HomePage = () => {
         At the core of our programs lies the importance of mindset in achieving your desired outcomes. Our thoughts, habits, and beliefs shape our identities, and by eliminating self-imposed limitations, you can unlock your full potential.
       </p>
       {/* Banner 2 */}
-      <div className='main-content-imgs'>
+      <div className='imgs-container'>
         <img className='mainpageimgs' src={Embrace} alt="Embrace" />
         <h1 className='img-text'>Embrace Growth & Transformation</h1>
       </div>
@@ -36,7 +36,7 @@ const HomePage = () => {
         Regardless of your background or current status, you possess the capacity for growth and transformation. Our training programs are tailored to help you break free from stagnation and ascend to even greater heights.
       </p>
       {/* Banner 3 */} 
-      <div className='main-content-imgs'>
+      <div className='imgs-container'>
         <img className='mainpageimgs' src={Cultivate} alt="Cultivate" />
         <h1 className='img-text'>Cultivate Positivity</h1>
       </div>
@@ -44,7 +44,7 @@ const HomePage = () => {
         Your environment plays a crucial role in your journey towards success. Cultivating positivity in your surroundings can propel you towards your goals and create a conducive space for growth.
       </p>
       {/* Banner 4 */}
-      <div className='main-content-imgs'>
+      <div className='imgs-container'>
         <img className='mainpageimgs' src={Fear} alt="Fear" />
         <h1 className='img-text'>Don't Let Fear Hold You Back</h1>
       </div>

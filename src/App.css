@@ -153,6 +153,8 @@ nav.menu-open {
 }
 
 /* HOME PAGE */
+
+/* Set styling for the tagline */
 .tagline {
   display: flex;
   justify-content: center;
@@ -167,6 +169,7 @@ nav.menu-open {
   
 }
 
+/* Set the background img and its stylying */
 .background-container {
   background-image: url('./Assets/splash-desktop.png');
   background-size: cover; 
@@ -175,21 +178,20 @@ nav.menu-open {
   margin-top: -7.3em;
   position: relative; /* Establish positioning context for absolutely positioned children */
 }
+
+/* Set styling for headings and paragraphs */
 .heading1 {
   font-size: 24px;
-  
 }
-
 .heading2 {
   margin-top: -1em;
   font-size: 20px;
-  
 }
-
 .main-content-text {
   margin: 20px;
 }
 
+/* Set styling for the New App banner */
 .newappbanner {
   display: flex;
   align-items: center;
@@ -200,17 +202,20 @@ nav.menu-open {
   width: 100px;
 }
 
-.main-content-imgs {
+/* Set styling for the images container on the home page */
+.imgs-container {
   position: relative;
   text-align: center;
   margin: 20px;
 }
 
+/* Set the styling for the images on the home page */
 .mainpageimgs{
   width:100%;
   border-radius: 8px;
 }
 
+/* Set the styling for the text that sits on top of the images on the home page */
 .img-text {
   position: absolute;
   top: 50%;
