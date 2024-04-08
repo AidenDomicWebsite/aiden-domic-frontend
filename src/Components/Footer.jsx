@@ -9,17 +9,20 @@ const Footer = () => {
     // Enable scrolling when the menu is closed
     document.body.style.overflow = 'auto';
   };
-    return (
-       <div className={menuOpen ? 'overlay-footer' : ''}>
-        <div>
+
+  return (
+    <div className={menuOpen ? 'overlay-footer' : ''}>
+      <div>
         <a className='footerhome' href="/" onClick={closeMenu}>STRENGTH TO BREATH</a>
         <a className='footerhome' href="/contact" onClick={closeMenu}>CONTACT</a>
-        </div>
+      </div>
+      <div>
         <p className='footer-text'>50/100 example st, Melbourne</p>
         <p className='footer-text'>example@email.com</p>
         <p className='footer-text'>0412 345 678</p>
       </div>
-    );
-  };
-  
-  export default Footer;
+    </div>
+  );
+};
+
+export default Footer;

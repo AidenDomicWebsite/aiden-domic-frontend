@@ -11,11 +11,13 @@ const HomePage = () => {
       <div className="background-img-container">
         <h1 className='tagline'>FITNESS | BREATHWORK | NUTRITION | MEDITATION</h1>
       </div>
-      <HPIntroduction/>
-      <Banner1/>
-      <Banner2/>
-      <Banner3/>
-      <Banner4/>
+      <div>
+        <HPIntroduction/>
+        <Banner1/>
+        <Banner2/>
+        <Banner3/>
+        <Banner4/>
+      </div>
     </div>
     
   );

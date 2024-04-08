@@ -31,17 +31,17 @@ function App() {
           <FontAwesomeIcon className='nav-mobile-icon' icon={faBars} onClick={toggleMenu} />
           <Link id='home' onClick={closeMenu} to="/">STRENGTH TO BREATH</Link>
           <nav className={menuOpen ? 'menu-open' : ''}>
-          <Link to="/services" onClick={closeMenu}>SERVICES <FontAwesomeIcon className='chevron' icon={faChevronRight} /></Link>
-          <Link to="/contact" onClick={closeMenu}>CONTACT <FontAwesomeIcon className='chevron' icon={faChevronRight} /></Link>
+            <Link to="/services" onClick={closeMenu}>SERVICES <FontAwesomeIcon className='chevron' icon={faChevronRight} /></Link>
+            <Link to="/contact" onClick={closeMenu}>CONTACT <FontAwesomeIcon className='chevron' icon={faChevronRight} /></Link>
           </nav>
         </header>
         <body>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-        </Routes>
-        {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+          </Routes>
+          {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
         </body>
         <footer className={menuOpen ? 'overlay-footer' : ''}>
           <Footer/>
