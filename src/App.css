@@ -170,13 +170,13 @@ nav.menu-open {
 }
 
 /* Set the background img and its stylying */
-.background-container {
+.background-img-container {
   background-image: url('./Assets/splash-desktop.png');
   background-size: cover; 
   background-position: center; 
   height: 50vh; 
   margin-top: -7.3em;
-  position: relative; /* Establish positioning context for absolutely positioned children */
+  position: relative;
 }
 
 /* Set styling for headings and paragraphs */
