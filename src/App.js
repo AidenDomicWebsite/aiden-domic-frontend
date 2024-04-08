@@ -6,6 +6,7 @@ import HomePage from './Pages/HomePage';
 import ServicesPage from './Pages/ServicesPage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faChevronRight, faX } from '@fortawesome/free-solid-svg-icons'
+import Footer from './Components/Footer';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -43,15 +44,8 @@ function App() {
         {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
         </body>
         <footer className={menuOpen ? 'overlay-footer' : ''}>
-        <div>
-          <Link className='footerhome' onClick={closeMenu} to="/">STRENGTH TO BREATH</Link>
-          <Link className='footerhome' onClick={closeMenu} to="/contact">CONTACT</Link>
-        </div>
-        <p className='footer-text'>50/100 example st, Melbourne</p>
-        <p className='footer-text'>example@email.com</p>
-        <p className='footer-text'>0412 345 678</p>
-      </footer>
-        
+          <Footer/>
+        </footer>
       </div>
     </Router>
   );
