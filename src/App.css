@@ -39,7 +39,7 @@ h1, h2, p, nav a, #home, .footerhome, .footercontact  {
 h1, h2, nav, #home, .footerhome, .footercontact  { font-family: "Barlow Condensed", sans-serif; }
 
 /* Set the font for all p tags on the page */
-p { font-family: "Kanit", sans-serif; }
+p, form { font-family: "Kanit", sans-serif; }
 
 /* Set the header height and color */
 header {
@@ -226,43 +226,93 @@ nav.menu-open {
 
 }
 
-@media (min-width: 1099px) {
-  /* Set nav icon and X icon to not display when the screen is in desktop view   */
-  .nav-mobile-icon, .x-icon {
-    display: none;
-  }
+/* CONTACT PAGE */
 
-  /* Set the styling of the nav container when the screen is in desktop view  */
-  nav {
-    position: absolute; 
-    display: flex;
-    right: 0;
-    margin-top: 33px;
-    font-size: 1.5em;
-    font-weight: 500;
-    z-index: 10;
-    background: none;
-  }
-  /* Set the styling of the nav items when the screen is in desktop view */
-  nav a {
-    margin-right: 20px;
-    background: none;
-  }
-  /* Set the chevron arrows to only display in mobile view */
-  .chevron {
-    display: none;
-  }
-  .background-container{
-    height: 100vh; 
-  }
-  .tagline{
-    top: 30%; 
-    font-size: 56px;
-  }
+.contact-details {
+  margin: 0px 20px;
+}
+
+.our-details-heading {
+  font-size: 2.5em;
+  margin: 0.5em 0;
+}
+
+.contact-form-card {
+  margin-top: 6em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+input, textarea {
+  padding: 1em;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: var(--text-color);
+  border: 2px solid transparent;
+  font-size: 1em;
+}
+
+input:hover, textarea:hover {
+  border: 2px solid var(--text-color);
+}
+
+.contact-heading {
+  margin: -2em 0em 0em 20px;
+  font-size: 2.5em;
+}
+
+label {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  color: var(--text-color);
+}
+
+textarea {
+  height: 200px;
+  width: 100%;
+  resize: vertical;
+  margin-bottom: 1em;
+  
+}
+
+.submit-btn {
+  display: flex;
+  width: auto;
+  background-color: var(--text-color);
+  cursor: pointer;
+  color: var(--primary-color);
+  box-shadow: none;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 6em;
+  font-weight: 600;
+  border: none;
+}
+
+.form-container {
+  padding: 0 20px ;
+}
+
+.submit-btn:hover {
+  border: none;
+  background-color: #c8a21e;
+  color: var(--background-color);
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--grey-color) inset;
+  -webkit-text-fill-color: var(--text-color);
 }
 
 /* NAVIGATION ANIMATIONS */
-/* ----------------------------------------------- */
 
 /* Set keyframes to transition elements from invisible to visible */
 @keyframes AppearOnPage {
@@ -305,6 +355,56 @@ nav a {
   animation: slightlyElevate 300ms ease-in 300ms forwards; /* Adjust duration and delay as needed */
 }
 
-/* ----------------------------------------------- */
-/* NAVIGATION ANIMATIONS */
+/* MEDIA QUERY */
 
+@media (min-width: 1099px) {
+  /* Set nav icon and X icon to not display when the screen is in desktop view   */
+  .nav-mobile-icon, .x-icon {
+    display: none;
+  }
+
+  /* Set the styling of the nav container when the screen is in desktop view  */
+  nav {
+    position: absolute; 
+    display: flex;
+    right: 0;
+    margin-top: 33px;
+    font-size: 1.5em;
+    font-weight: 500;
+    z-index: 10;
+    background: none;
+  }
+  /* Set the styling of the nav items when the screen is in desktop view */
+  nav a {
+    margin-right: 20px;
+    background: none;
+  }
+  /* Set the chevron arrows to only display in mobile view */
+  .chevron {
+    display: none;
+  }
+  /* Increase the size of the home page tag line */
+  .tagline{
+    top: 30%; 
+    font-size: 56px;
+  }
+  /* Set the styling of the contact page in desktop view */
+  .contact-page-container {
+    display: flex;
+    justify-content: center;
+  }
+  .contact-details, .contact-form-container {
+    display: inline-block;
+    margin: 2em 2em;
+  }
+  .form-container {
+    width: 700px;
+  }
+}
+
+ @media (min-width: 1200px) {
+  .contact-details, .contact-form-container {
+    margin: 2em 4em;
+  }
+  
+}; 
