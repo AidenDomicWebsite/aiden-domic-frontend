@@ -191,40 +191,7 @@ nav.menu-open {
   margin: 20px;
 }
 
-/* Set styling for the New App banner */
-.newappbanner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-top: -5em;
-  margin-left: 20px;
-  width: 100px;
-}
 
-/* Set styling for the images container on the home page */
-.imgs-container {
-  position: relative;
-  text-align: center;
-  margin: 20px;
-}
-
-/* Set the styling for the images on the home page */
-.mainpageimgs{
-  width:100%;
-  border-radius: 8px;
-}
-
-/* Set the styling for the text that sits on top of the images on the home page */
-.img-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  width: 90%;
-
-}
 
 /* CONTACT PAGE */
 
@@ -312,6 +279,55 @@ input:-webkit-autofill {
   -webkit-text-fill-color: var(--text-color);
 }
 
+/* SERVICES PAGE */
+
+/* Set styling for the New App banner */
+.newappbanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: -5em;
+  margin-left: 20px;
+  width: 100px;
+}
+
+/* Set styling for the images container on the home page */
+.imgs-container {
+  position: relative;
+  text-align: center;
+  /* margin: 20px; */
+}
+
+.imgs-container:hover{
+  opacity: 0.8;
+  transition: all 300ms ease;
+}
+
+/* Set the styling for the images on the home page */
+.mainpageimgs{
+  width:100%;
+  border-radius: 8px;
+}
+
+/* Set the styling for the text that sits on top of the images on the home page */
+.img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: 90%;
+}
+
+.service-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+
 /* NAVIGATION ANIMATIONS */
 
 /* Set keyframes to transition elements from invisible to visible */
@@ -355,7 +371,25 @@ nav a {
   animation: slightlyElevate 300ms ease-in 300ms forwards; /* Adjust duration and delay as needed */
 }
 
+
+
 /* MEDIA QUERY */
+@media (min-width: 900px) {
+  .service-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    gap: 20px;
+    width: 70%;
+    margin: 4em auto;
+
+  }
+  .imgs-container {
+    width: 600px;
+  }
+}
+
 
 @media (min-width: 1099px) {
   /* Set nav icon and X icon to not display when the screen is in desktop view   */
@@ -402,9 +436,16 @@ nav a {
   }
 }
 
- @media (min-width: 1200px) {
+
+ /* @media (min-width: 1200px) {
   .contact-details, .contact-form-container {
     margin: 2em 4em;
   }
-  
-}; 
+};  */
+
+/* @media (min-width: 1850px) {
+  .service-card-container {
+    margin: 0 400px;
+  }
+}; */
+

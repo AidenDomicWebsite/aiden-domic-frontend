@@ -4,10 +4,13 @@ import './App.css';
 import ContactPage from './Pages/ContactPage';
 import HomePage from './Pages/HomePage';
 import ServicesPage from './Pages/ServicesPage';
+import FitnessPage from './Pages/FitnessPage';
+import BreathworkPage from './Pages/BreathworkPage';
+import NutritionPage from './Pages/NutritionPage';
+import MeditationPage from './Pages/MeditationPage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faChevronRight, faX } from '@fortawesome/free-solid-svg-icons'
 import Footer from './Components/Footer';
-
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -40,6 +43,10 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/fitness" element={<FitnessPage />} />
+            <Route path="/services/breathwork" element={<BreathworkPage />} />
+            <Route path="/services/nutrition" element={<NutritionPage />} />
+            <Route path="/services/meditation" element={<MeditationPage />} />
           </Routes>
           {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
         </body>
