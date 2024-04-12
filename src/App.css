@@ -195,7 +195,7 @@ nav.menu-open {
 
 .our-details-heading {
   /* font-size: 2.5em; */
-  margin: 0.5em 0;
+  margin: 1em 0;
 }
 
 .contact-form-card {
@@ -417,6 +417,8 @@ nav a {
 /* MEDIA QUERY */
 @media (min-width: 900px) {
 
+  
+
   /* Set nav icon and X icon to not display when the screen is in desktop view   */
   .nav-mobile-icon, .x-icon {
     display: none;
@@ -443,90 +445,11 @@ nav a {
     display: none;
   }
 
-  .service-image-desktop {
-    display: block;
-    width: 100%;
-  }
-
-  .page-blurb {
-    width: 800px;
-    margin: auto;
-    font-size: 20px;
-    padding-bottom: 150px;
-  }
-
-  .service-image-mobile {
-    display: none;
-  }
-
-  .service-title {
-    right: 9.25em;
-  }
-
-  .service-title1 {
-    right: 7.37em;
-  }
-
-  .service-title2 {
-    right: 8.35em;
-  }
-
-  .service-title3 {
-    right: 8em;
-  }
-
-  .service-title, .service-title1, .service-title2, .service-title3 {
-    font-size: 4rem;
-    display: flex;
-    justify-content: center;
-    top:0em;
-  }
   
 
-  .service-tag {
-    right: 8.9em;
-  }
+  
 
-  .service-tag1 {
-    right: 5.4em;
-  }
-
-  .service-tag2 {
-    right: 13.3em;
-  }
-
-  .service-tag3 {
-    right: 5.4em;
-  }
- .service-tag, .service-tag1, .service-tag2, .service-tag3 {
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    top:2.5em;
-  }
-
-  .service-cta{
-    right: 24.6em;
-  }
-
-  .service-cta1 {
-    right: 22.6em;
-  } 
-
-  .service-cta2 {
-    right: 25.5em;
-  } 
-
-  .service-cta3 {
-    right: 22.5em;
-  } 
-
- .service-cta, .service-cta1, .service-cta2, .service-cta3 {
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    top: 10em;
-  }   
+  
   
 } 
 
@@ -538,18 +461,7 @@ nav a {
     top: 30%; 
     font-size: 56px;
   }
-  /* Set the styling of the contact page in desktop view */
-  .contact-page-container {
-    display: flex;
-    justify-content: center;
-  }
-  .contact-details, .contact-form-container {
-    display: inline-block;
-    margin: 2em 2em;
-  }
-  .form-container {
-    width: 700px;
-  }
+ 
 }
 
 @media (min-width: 1250px) {
@@ -566,6 +478,114 @@ nav a {
  .imgs-container {
   width: 600px;
 }
+
+footer {
+  border-top: solid var(--text-color);
+  margin: auto;
+  padding: 20px 0px;
+  width: 1220px;
+} 
+
+ /* Set the styling of the contact page in desktop view */
+ .contact-page-container {
+  display: flex;
+  justify-content: center;
+}
+.contact-details, .contact-form-container {
+  display: inline-block;
+  /* margin: 2em 2em; */
+}
+.form-container {
+  width: 1060px;
+}
+
+.page-blurb {
+  width: 1250px;
+  margin: auto;
+  font-size: 20px;
+  padding-bottom: 150px;
+}
+
+.service-image-mobile {
+  display: none;
+}
+
+.service-title {
+  right: 16.35em;
+  
+}
+
+.service-title1 {
+  right: 14.4em;
+  
+}
+
+.service-title2 {
+  right: 15.35em;
+}
+
+.service-title3 {
+  right: 15.05em;
+}
+
+.service-title, .service-title1, .service-title2, .service-title3 {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  top:0em;
+}
+
+
+.service-tag {
+  right: 23em;
+}
+
+.service-tag1 {
+  right: 19.5em;
+}
+
+.service-tag2 {
+  right: 27.3em;
+}
+
+.service-tag3 {
+  right: 19.48em;
+}
+.service-tag, .service-tag1, .service-tag2, .service-tag3 {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  top:2.5em;
+}
+
+.service-cta{
+  right: 52.7em;
+}
+
+.service-cta1 {
+  right: 50.7em;
+} 
+
+.service-cta2 {
+  right: 53.6em;
+} 
+
+.service-cta3 {
+  right: 50.65em;
+} 
+
+.service-cta, .service-cta1, .service-cta2, .service-cta3 {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  top: 10em;
+}   
+
+.service-image-desktop {
+  display: block;
+  width: 100%;
+}
+
 }
 
 @media (min-width: 1900px) {

@@ -14,12 +14,12 @@ const Footer = () => {
     <div className={menuOpen ? 'overlay-footer' : ''}>
       <div>
         <a className='footerhome' href="/" onClick={closeMenu}>STRENGTH TO BREATH</a>
-        <a className='footerhome' href="/contact" onClick={closeMenu}>CONTACT</a>
+        <a className='footerhome' href="/contact" onClick={closeMenu}>CONTACT US</a>
       </div>
       <div>
-        <p className='footer-text'>50/100 example st, Melbourne</p>
-        <p className='footer-text'>example@email.com</p>
-        <p className='footer-text'>0412 345 678</p>
+        {/* <p className='footer-text'>50/100 example st, Melbourne</p>
+        <p className='footer-text'>example@email.com</p> */}
+        <p className='footer-text'>0478 662 654</p>
       </div>
     </div>
   );
