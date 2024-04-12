@@ -6,12 +6,12 @@ import MeditationCard from '../Components/MeditationCard';
 
 const ServicesPage = () => {
     return (
-      <div className='test'>
+      <div>
         <div className='service-card-container'>
-          <FitnessCard/>
-          <BreathworkCard/>
-          <NutritionCard/>
-          <MeditationCard/>
+        <div className='test'><FitnessCard/></div>
+        <div className='test' ><BreathworkCard/></div>
+        <div className='test'><NutritionCard/></div>
+        <div className='test'><MeditationCard/></div>
         </div>
       </div>
     );
