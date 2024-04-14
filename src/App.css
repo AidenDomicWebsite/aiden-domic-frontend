@@ -185,6 +185,13 @@ nav.menu-open {
   margin: 20px;
 }
 
+video {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  border-radius: 32px;
+}
+
 
 
 /* CONTACT PAGE */
@@ -211,13 +218,15 @@ form {
 }
 
 input, textarea {
-  padding: 1em;
+  padding: 1rem;
   border: none;
   outline: none;
   border-radius: 4px;
-  background-color: var(--text-color);
+  background-color: var(--secondary-color);
   border: 2px solid transparent;
-  font-size: 1em;
+  font-size: 1rem;
+  color: var(--text-color);
+  font-family: "Kanit", sans-serif; 
 }
 
 input:hover, textarea:hover {
@@ -269,8 +278,13 @@ textarea {
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px var(--grey-color) inset;
+  -webkit-box-shadow: 0 0 0px 1000px var(--secondary-color) inset;
   -webkit-text-fill-color: var(--text-color);
+}
+
+.error-message, .success-message {
+  margin-left: 20px;
+  margin-top: -54px;
 }
 
 /* SERVICES PAGE */
@@ -320,6 +334,11 @@ input:-webkit-autofill {
   width: 90%;
 }
 
+.cta-icon {
+  margin-left: 8px;
+  margin-bottom: -2px;
+}
+
 /* CARD STYLING */
 
 .service-image-desktop {
@@ -351,6 +370,7 @@ input:-webkit-autofill {
   font-size: 0.7rem;
   text-decoration: underline;
   color: var(--text-color);
+  height: 16px;
 }
 
 
@@ -398,6 +418,24 @@ nav a {
 }
 
 /* Set keyframes to slightly elevate elements upwards */
+
+@keyframes cta {
+  0% {
+    transform: translatex(0px) translatey(0px)
+}
+100% {
+    transform: translatex(8px) translatey(-8px);
+}
+}
+
+.service-cta:hover .cta-icon, 
+.service-cta1:hover .cta-icon, 
+.service-cta2:hover .cta-icon , 
+.service-cta3:hover .cta-icon{
+  animation: cta 300ms ease-in 300ms forwards;;
+}
+
+
 @keyframes slightlyElevate {
   0% {
     opacity: 0; 
@@ -412,6 +450,7 @@ nav a {
   opacity: 0; 
   animation: slightlyElevate 300ms ease-in 300ms forwards; /* Adjust duration and delay as needed */
 }
+
 
 
 /* MEDIA QUERY */
@@ -444,13 +483,6 @@ nav a {
   .chevron {
     display: none;
   }
-
-  
-
-  
-
-  
-  
 } 
 
 
@@ -584,6 +616,12 @@ footer {
 .service-image-desktop {
   display: block;
   width: 100%;
+}
+
+video {
+  width: 1260px;
+  display: flex;
+  margin: 1rem auto;
 }
 
 }
