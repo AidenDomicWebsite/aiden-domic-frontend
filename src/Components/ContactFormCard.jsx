@@ -31,7 +31,7 @@ export default function ContactFormCard() {
   
       if (response.ok) {
         // Email sent successfully
-        setSuccessMessage('Thank you for contacting me. You will receive a response as soon as possible.');
+        setSuccessMessage('Thank you for contacting us. You will receive a response as soon as possible.');
         setErrorMessage(''); // Clear any previous error messages
 
         // Clear the form data on successful submission
