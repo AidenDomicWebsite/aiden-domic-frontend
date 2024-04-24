@@ -27,10 +27,3 @@ const FitnessPage = () => {
   };
   
   export default FitnessPage;
-
-
-  
-
-     {/* <h1 className='service-title'>FITNESS:</h1>
-        <h2 className='service-tag'>Sculpting Success with Mind-Body Mastery</h2>
-        <a href='/contact'><h2 className='service-cta'>Speak to us about expanding your fitness <FontAwesomeIcon className='cta-icon' icon={faSquareArrowUpRight} /></h2></a> */}
