@@ -165,12 +165,16 @@ nav.menu-open {
 
 /* Set the background img and its stylying */
 .background-img-container {
-  background-image: url('./Assets/splash-desktop.png');
+  background-image: url('./Assets/splash-v2.png');
   background-size: cover; 
   background-position: center; 
   height: 50vh; 
   margin-top: -6em;
   position: relative;
+}
+
+.video-gb {
+  
 }
 
 /* Set styling for headings and paragraphs */
@@ -186,10 +190,9 @@ nav.menu-open {
 }
 
 video {
-  box-sizing: border-box;
-  padding: 20px;
   width: 100%;
-  border-radius: 32px;
+  height: 100vh;
+  object-fit: cover;
 }
 
 
@@ -619,9 +622,11 @@ footer {
 }
 
 video {
-  width: 1260px;
+  /* width: 1260px;
   display: flex;
-  margin: 1rem auto;
+  margin: 1rem auto; */
+  border-radius: 0px;
+  margin: 0;
 }
 
 }
